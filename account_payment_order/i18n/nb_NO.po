@@ -370,7 +370,6 @@ msgstr "Betalingstransaksjonens myntenhet"
 #. module: account_payment_order
 #: model_terms:ir.ui.view,arch_db:account_payment_order.print_account_payment_order_document
 #, fuzzy
-#| msgid "Payment Order"
 msgid "Debit Order"
 msgstr "Betalingsordre"
 
@@ -629,6 +628,7 @@ msgid "Inbound"
 msgstr "Innkommende"
 
 #. module: account_payment_order
+#: model:ir.model.fields,field_description:account_payment_order.field_account_bank_statement_import_journal_creation__inbound_payment_order_only
 #: model:ir.model.fields,field_description:account_payment_order.field_account_journal__inbound_payment_order_only
 #, fuzzy
 msgid "Inbound Payment Order Only"
@@ -652,7 +652,6 @@ msgstr ""
 #. module: account_payment_order
 #: model:ir.model,name:account_payment_order.model_account_journal
 #, fuzzy
-#| msgid "Bank Journal"
 msgid "Journal"
 msgstr "Bankjournal"
 
@@ -920,7 +919,6 @@ msgstr ""
 #. module: account_payment_order
 #: model:ir.model.fields,field_description:account_payment_order.field_account_payment_method__payment_order_only
 #, fuzzy
-#| msgid "Add to Payment Order"
 msgid "Only for payment orders"
 msgstr "Legg til betalingsordre"
 
@@ -941,6 +939,7 @@ msgid "Outbound"
 msgstr ""
 
 #. module: account_payment_order
+#: model:ir.model.fields,field_description:account_payment_order.field_account_bank_statement_import_journal_creation__outbound_payment_order_only
 #: model:ir.model.fields,field_description:account_payment_order.field_account_journal__outbound_payment_order_only
 #, fuzzy
 msgid "Outbound Payment Order Only"
@@ -1011,7 +1010,6 @@ msgstr "Betalingsmetode"
 #. module: account_payment_order
 #: model:ir.model,name:account_payment_order.model_account_payment_method
 #, fuzzy
-#| msgid "Payment Method"
 msgid "Payment Methods"
 msgstr "Betalingsmetode"
 

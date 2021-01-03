@@ -59,8 +59,14 @@ class AccountMoveLine(models.Model):
             # in this case
         if payment_order.payment_type == 'outbound':
             amount_currency *= -1
-        partner_bank_id = self.partner_bank_id.id or first(
-            self.partner_id.bank_ids).id
+        partner_bank_id = self.partner_bank_id.id
+        if not partner_bank_id:
+            bank_ids = self.partner_id.bank_ids
+            # trick this for making it compatible with partner_bank_active
+            # forcing the search for discarding inactive records
+            if 'active' in bank_ids:  # pragma: no cover
+                bank_ids = bank_ids.filtered('active')
+            partner_bank_id = first(bank_ids).id
         vals = {
             'order_id': payment_order.id,
             'partner_bank_id': partner_bank_id,
@@ -132,5 +138,8 @@ class AccountMoveLine(models.Model):
                 doc.remove(elem)
             for elem in doc.xpath("//field[@name='credit']"):
                 doc.remove(elem)
-            result['arch'] = etree.tostring(doc)
+            arch, fields = self.env['ir.ui.view'].postprocess_and_fields(
+                self._name, doc, view_id,
+            )
+            result.update(arch=arch, fields=fields)
         return result

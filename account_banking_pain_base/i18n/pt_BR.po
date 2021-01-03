@@ -121,7 +121,6 @@ msgstr ""
 #. module: account_banking_pain_base
 #: code:addons/account_banking_pain_base/models/account_payment_order.py:101
 #, fuzzy, python-format
-#| msgid "Cannot compute the '%s'."
 msgid "Cannot compute the field '{field_name}'."
 msgstr "Não foi possível computar o '%s'"
 
@@ -238,7 +237,7 @@ msgid "Credit Card Payment "
 msgstr ""
 
 #. module: account_banking_pain_base
-#: code:addons/account_banking_pain_base/models/account_payment_order.py:451
+#: code:addons/account_banking_pain_base/models/account_payment_order.py:449
 #, python-format
 msgid "Creditor name"
 msgstr ""
@@ -263,7 +262,7 @@ msgid "Debit Card Payment"
 msgstr ""
 
 #. module: account_banking_pain_base
-#: code:addons/account_banking_pain_base/models/account_payment_order.py:453
+#: code:addons/account_banking_pain_base/models/account_payment_order.py:451
 #, python-format
 msgid "Debtor name"
 msgstr ""
@@ -640,7 +639,7 @@ msgid "PAIN Version"
 msgstr ""
 
 #. module: account_banking_pain_base
-#: code:addons/account_banking_pain_base/models/account_payment_order.py:449
+#: code:addons/account_banking_pain_base/models/account_payment_order.py:447
 #, python-format
 msgid "Partner name"
 msgstr ""
@@ -654,7 +653,6 @@ msgstr ""
 #. module: account_banking_pain_base
 #: code:addons/account_banking_pain_base/models/account_payment_order.py:142
 #, fuzzy, python-format
-#| msgid "Cannot compute the '%s' of the Payment Line with reference '%s'."
 msgid "Payment Line has reference '%s'."
 msgstr ""
 "Não foi possível calcular a '%s' da linha de pagamento com referência '%s'"
